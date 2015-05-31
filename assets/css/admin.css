@@ -1,0 +1,1302 @@
+/*---------------------------------
+admin.css
+SIGEQ (Admin Section) - CSS v. 1.0 
+Por: Vitor Greati 
+28/12/2014
+-----------------------------------*/
+
+/* fonts
+-----------------------------------*/
+@font-face{
+	font-family:Cabin;
+	src:url('../fonts/Cabin-Regular.otf');
+	src:url('../fonts/Cabin-Regular.woff') format('woff');
+}
+
+/* general
+-----------------------------------*/
+
+*, *:before, *:after{
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+body{
+	font-family:Cabin;
+	font-size:100%;
+	background:#ccc;
+}
+
+h1{font-size:2.0em;}
+h2{font-size:1.8em;}
+h3{font-size:1.6em;}
+h4{font-size:1.4em;}
+h5{font-size:1.2em;}
+h6{font-size:1.0em;}
+
+form, textarea {
+	font-family:Cabin;
+}
+
+img{
+	max-width:100%;
+}
+
+a{
+	text-decoration:none;
+	color:#000;
+}
+
+form p{
+	padding:5px 0;
+	width:100%;
+}
+
+fieldset{
+    margin-bottom:.8em;
+}
+
+legend{
+	display:block;
+	width:100%;
+	padding:5px 0;
+	margin-bottom:8px;
+	border-bottom:1px solid #999;
+}
+
+label{
+	display:block;
+	width:35%;
+	float:left;
+	font-size:.7em;
+	padding:2px 0px;
+	color:#000;
+	padding:6.5px 0;
+}
+
+button,
+input[type=button],
+input[type=submit]{
+	border:0;
+	background:#0067BD;
+	color:#FFF;
+	font-family:cabin;
+	padding:8px 5px;
+	border-radius:5px;
+}
+
+input[type=text],
+input[type=password], 
+input[type=file],
+input[type=date],
+select,
+textarea{
+	font-family:cabin;
+	font-size:.7em;
+	padding:5px 5px;
+	border:0;
+	width:65%;
+	border-left:3px solid #0067BD;
+	border-radius:0 5px 5px 0;
+	resize:vertical;
+}
+
+input[type=checkbox]{
+	background:#000;
+	width:10%;
+	text-align:left;
+	margin:0;
+	padding:0;
+}
+
+table{
+	width:100%;
+	border-collapse: collapse;
+	background:#eee;
+	border-radius:5px;
+}
+
+tr{
+	margin-top:10px;
+}
+
+tr img{
+	width:2em;
+	height:2em;
+	margin:0;
+	padding:0;
+	border-radius:5px;
+}
+
+td, th{
+	font-size:.7em;
+	vertical-align: middle;
+	padding:10px .3em;
+	text-align:left;
+}
+
+td a{
+	color:#333;
+}
+
+td{
+	border-top:1px solid #ccc;
+}
+
+th{
+	font-size:.75em;
+	color:#000;
+	border-bottom:1px solid #0067BD;
+}
+
+td a i.fa{
+	font-size:1.4em;
+}
+
+table a.bt-delete{
+    color:#FF0000;
+}
+table a.bt-edit{
+    color:#000;
+}
+table a.bt-info{
+    color:#666
+}
+
+.appear-medium, .appear-high{
+    display:none;
+}
+
+/* Grid System
+-----------------------------------*/
+#page{
+	width:100%;
+	margin:0 auto;
+}
+
+#page:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.row:before,
+.row:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+[class*='col-'] {
+	float: left;
+}
+
+[class*='col-'] {
+  	padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  	padding-right: 0;
+}
+
+.col-1-4{
+	width:25%;
+}
+
+.col-1-12{
+	width:8.33%
+}
+
+.col-3-12{
+	width:25%;
+}
+
+.col-8-12{
+	width:66.66%;
+}
+
+/* forms
+-----------------------------------*/
+
+.label-checkbox{
+	width:90%;
+	float:right;
+	position:relative;
+	top:-4px;
+}
+
+fieldset.bts{
+	text-align:right;
+	margin-top:15px;
+	border-top:1px solid #666;
+	padding-top:10px;
+}
+
+/*/ errors /*/
+.error{
+    font-size:.7em;
+    padding:.3em 0;
+    text-align:right;
+    clear:both;
+    color:#FF0000;
+}
+
+/* OOCSS classes
+-----------------------------------*/
+.header-no-nav{
+	padding:.7em 5%;
+	display:block;
+	/*background:#004B9C;*/
+	background:linear-gradient(#004B9C,#003264);
+	/*background:#004B9C;*/
+}
+
+/* page-header
+-----------------------------------*/
+#page-header{
+	background:#0067BD;
+}
+
+#page-header i{
+	display:block;
+	font-size:3em;
+}
+
+/*/ logo /*/
+#logo{
+	float:left;
+}
+
+#logo img{
+	width:97px;
+	height:27px;
+}
+
+/*/ info nav /*/
+
+#page-header nav#info-nav{
+	float:right;
+	display:none;
+	padding:.35em 0;
+}
+
+#page-header nav#info-nav ul li{
+	float:left;
+}
+
+#page-header nav#info-nav ul li a{
+	font-size:.8em;
+	padding:.5em;
+	color:#FFF;
+	opacity:.8;
+}
+
+#page-header nav#info-nav ul li a:hover{
+	opacity:1;
+}
+
+/*/ search form /*/
+
+#page-header #header-search-form{
+	width:40%;
+	float:left;
+	display:none;
+	text-align:right;
+}
+#page-header #header-search-form button{
+	font-size:.7em;
+	padding:.7em .25em;
+	border-radius:0px 5px 5px 0px;
+	width:20%;
+}
+#page-header #header-search-form input[type=text]{
+	padding:.8em .5em;
+	border-radius:5px 0px 0px 5px;
+	border:0;
+	width:75%;
+	font-size:.7em;
+}
+
+/* main navigation
+----------------------------------*/
+
+#page-header nav#main-nav{
+	clear:both;
+	color:#FFF;
+}
+
+/*/ main menu /*/
+
+#page-header nav#main-nav ul{
+	margin:0 auto;
+}
+
+#page-header nav#main-nav ul li{
+	float:left;
+	display:block;
+	width:25%;
+}
+
+#page-header nav#main-nav ul li a.bt-menu{
+	display:block;
+	text-align:center;
+	color:#FFF;
+	font-size:.7em;
+	padding:1.8em 0;
+}
+
+#page-header nav#main-nav ul li a.bt-menu span{
+	position:relative;
+	top:.7em;
+	display:block;
+	clear:both;
+}
+
+#page-header nav#main-nav ul li a.bt-menu span.menu-desc{
+	display:none;
+}
+
+#page-header nav#main-nav ul li a.bt-menu span i{
+	position:relative;
+	top:-.4em;
+}
+
+#page-header nav#main-nav ul li a.bt-menu:hover{
+	background:rgba(255,255,255,.4);
+}
+
+#page-header nav#main-nav ul li a.bt-menu-selected{
+	background:rgba(255,255,255,.4);
+}
+
+#page-header nav#main-nav ul li a.has-submenu i{ /* makes options appear by default*/
+	display:none;
+}
+
+/*/ sub-nav /*/
+
+#page-header nav#main-nav ul.sub-menu{
+	width:100%;
+}
+
+#page-header nav#main-nav ul.sub-menu li{
+	width:50%;
+}
+
+#page-header nav#main-nav ul.sub-menu li a{
+	display:block;
+	text-align:center;
+	background:rgba(255,255,255,.2);
+	font-size:.5em;
+	padding:1.85em 0;
+	color:#FFF;
+}
+
+#page-header nav#main-nav ul.sub-menu li a:hover{
+	background:rgba(255,255,255,.1);
+}
+
+/*/ page title /*/
+
+#page-header #page-title{
+	display:block;
+	clear:both;
+	background:#003264;
+	color:#FFF;
+	text-align:center;
+	padding:15px 5%;
+	font-size:.9em;
+}
+
+#page-header #page-title .page-title-arrow{
+	display:block;
+	font-size:2em;
+	padding:0;
+	position:absolute;
+	text-align:center;
+	width:90%;
+	color:#003264;
+	margin-top:2px;
+}
+
+#logged-user-panel, #unlogged-user-panel{
+	font-size:.7em;
+	color:#FFF;
+	padding-top:2px;
+	float:right;
+	text-align:right;
+}
+
+#logged-user-panel img{
+	width:25px;
+	height:25px;
+	border-radius:5px;
+	margin-right:.3em;
+}
+
+#logged-user-info{
+	float:right;
+	position:relative;
+	top:-1px;
+	text-align:left;
+}
+
+#logged-user-info a{
+	position:relative;
+	top:2px;
+	padding:9px 2px;
+	color:#eee;
+	text-transform:uppercase;
+}
+
+#logged-user-info span{
+	padding:0 2px;
+	font-size:1.2em;
+}
+
+#unlogged-user-panel{
+    padding:0em 0;
+    top:0;
+}
+#unlogged-user-panel a{
+    color:#fff;
+    text-transform:uppercase;
+    font-size:1.2em;
+    padding:.65em .8em;
+    background:rgba(0,0,0,.5);
+    border-radius:5px;
+    display:block;
+}
+#unlogged-user-panel a:active{
+    background:rgba(0,0,0,1);
+}
+#unlogged-user-panel a i{
+    font-size:1em;
+    float:left;
+    padding:0 .6em 0 0;
+}
+
+/* page-main
+-----------------------------------*/
+#page-main{
+	margin:1.3em auto;
+	width:90%;
+        background:#eee;
+        border-radius:5px;
+        padding:1.2em;
+}
+
+#page-main h3.page-main-title{
+    color:#003264;
+    font-size:1.2em;
+    position:relative;
+    display:block;
+    clear:both;
+    margin-bottom:.8em;
+}
+
+#page-main p{
+
+}
+
+.page-login-side-form{
+
+}
+
+.page-login-form{
+    padding-right:.5em;
+}
+
+/*/ consultar equipamentos /*/
+.equip-list-item{
+    width:100%;
+    clear:both;
+    background:#eee;
+    margin-bottom:1em;
+    border-radius:5px;
+    font-size:.8em;
+    background:#e5e5e5;
+    padding:1em;
+    box-shadow:1px 1px 1px #000;
+}
+
+.equip-list-item p{
+    padding:.3em 0;
+    margin-bottom:.2em;
+    color:#000;
+}
+
+.equip-list-item h3{
+    padding:0 0 .4em 0 !important;
+}
+
+.equip-list-item h6{
+    text-transform: uppercase;
+    font-size:.8em;
+    color:#000;
+}
+
+.equip-list-item h3 a{
+    font-size:.9em;
+    color:#003264;
+}
+
+.equip-list-item .equip-img{
+    width:21%;
+    float:left;
+    margin-right:.5em;
+}
+
+.equip-list-item div.equip-img img{
+    border:1px solid #999;
+}
+
+.equip-list-item footer{
+    width:100%;
+    border-top:1px solid #666;
+    padding:.6em 0 .2em 0;
+    position:relative;
+    top: .5em;
+    clear:both;
+}
+
+.equip-list-item footer h6{
+    float:left;
+    padding:.2em 0;
+    margin:0;
+}
+
+/*/ consultar tutoriais /*/
+.tut-list-item{
+    width:100%;
+    clear:both;
+    background:#eee;
+    border-radius:5px;
+    font-size:.8em; 
+    border-bottom:1px solid #ccc;
+    padding:1.5em 0;
+}
+
+.tut-list-item:last-of-type{
+    border:0;
+}
+
+.tut-list-item address{
+    margin-bottom:5px;
+}
+
+.tut-list-item h3{
+    padding:0 0 .4em 0 !important;
+    font-size:1.4em;
+}
+
+.tut-list-item h3 a{
+    font-size:.9em;
+    color:#003264;
+}
+
+.tut-list-item h3 a i{
+    padding:0 .3em 0 0;
+}
+
+/*/ consultar users /*/
+.user-list-item{
+    width:49%;
+    background:#eee;
+    padding:.6em .6em .7em .6em;
+    margin-bottom:1em;
+    border-radius:5px;
+    font-size:.8em;
+    text-align:center;
+    float:left;
+}
+
+.user-list-item h3{
+    font-size:1em;
+    padding-bottom: .4em;
+}
+
+.user-list-item div.avatar{
+    margin-right:.5em;
+    width:100%;
+}
+
+.user-list-item div.info{
+    width:100%;
+}
+
+.user-list-item i{
+    font-size:1.3em;
+    padding-right:.3em;
+}
+
+.user-list-item div.avatar img{
+    border-radius:5px;
+    border:1px solid #999;
+}
+
+/*/ perfil /*/
+.perfil{
+    width:100%;
+    clear:both;
+}
+.perfil header{
+    text-align:center;
+    margin-bottom:1em;
+}
+
+.perfil header p{
+    margin-top:1em;
+    padding:.8em 0;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    font-size:.8em;
+}
+
+.perfil header .avatar{
+    box-shadow:inset 0px 0px 6px rgba(0,0,0,.8);
+    border-radius:50%;
+    margin:0 auto;
+    width:100px;
+    height:100px;
+}
+
+.perfil header img{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    z-index:-1;
+    position:relative;
+}
+
+.perfil h3{
+    font-size:1.4em;
+    padding:.5em 0;
+    color:#003264;
+}
+
+.perfil td{
+    border-bottom:1px solid #ccc;
+    border-top:0;
+}
+
+/*/ equipamento /*/
+
+.equipamento section{
+    margin-bottom:1.5em;
+}
+
+.equipamento p{
+    font-size:.8em;
+    line-height:1.4;
+    text-align:justify;
+}
+
+.equipamento table#equip_info{
+    margin:.8em 0;
+}
+
+.equipamento td{
+    border:0;
+    border-bottom:1px solid #ccc;
+}
+
+.equipamento div.equip-img{
+    margin:.5em 0 .5em 0;
+    width:100%;
+    text-align:center;
+}
+
+.equipamento div.equip-img img{
+    border:1px solid #999;
+    width:60%;
+}
+
+.equipamento h3{
+    font-size:1.4em;
+    padding:0 0 .5em 0;
+    color:#003264;
+    text-align:center;
+}
+
+.equipamento h4{
+    font-size:1em;
+    border-bottom:1px solid #999;
+    padding:.4em 0;
+    margin-bottom:.4em;
+    clear:both;
+}
+
+.equipamento section.bts{
+    clear:both;
+    display:block;
+    padding:.5em 0;
+    margin-bottom:2em;
+}
+
+.equipamento section.bts a{
+    font-size:.8em;
+    padding:.7em 0;
+    width:49%;
+    background:#0067BD;
+    color:#FFF;
+    display:block;
+    float:left;
+    text-align:center;
+    margin-left:1%;
+}
+.equipamento section.bts a:first-of-type{
+    margin-left:0;
+    width:50%;
+}
+/*/ tutorial /*/
+
+.tutorial{
+    text-align:justify;
+}
+
+.tutorial h3{
+    color:#003264;
+    font-size:1.5em;
+    padding:0 0 .5em 0;
+}
+
+.tutorial address{
+    display:inline;
+}
+
+.tutorial footer{
+    width:100%;
+    border-top:1px solid #999;
+    padding:.5em 0;
+    margin-bottom:1em;
+}
+
+/*/ ambiente /*/
+.ambiente{
+    text-align:center;
+}
+.ambiente h3{
+    font-size:1.4em;
+    margin-bottom:.3em;
+    color:#003264;
+}
+.ambiente header{
+    margin-bottom:.5em;
+    background:#eee;
+    border-radius:5px;
+    padding:.4em;
+}
+.ambiente header a{
+    color:#0067BD;
+    font-size:.8em;
+    padding:.4em;
+}
+
+.ambiente p{
+    font-size:.8em;
+    color:#333;
+}
+
+.ambiente section{
+    margin:1em 0;
+}
+
+.ambiente section h4{
+    color:#003264;
+    font-size:1em;
+    margin-bottom:.5em;
+    border-bottom:1px solid #999;
+    padding:.5em 0;
+}
+
+.ambiente ul#equipamentos_presentes li{
+    background:#FFF;
+    border:1px solid #999;
+    border-radius:5px;
+    margin-bottom:.4em;
+}
+
+.ambiente ul#equipamentos_presentes li a{
+    font-size:.9em;
+    padding:.5em;
+    display:block;
+}
+
+/*/ pallet ambiente /*/
+#ambiente-pallet{
+    position:relative;
+}
+
+#ambiente-pallet button{
+    background:#0067BD;
+    font-size:1.5em;
+    padding:.5em;
+    display:block;
+    float:left;
+    border-radius:0;
+    cursor:pointer;
+}
+
+#ambiente-pallet button:hover{
+    background:rgba(255,255,255,.5);
+}
+
+/*/ mapa ambiente /*/
+#mapa-ambiente{
+    width:100%;
+    clear:both;
+    text-align:left;
+    height:200px;
+}
+
+#mapa-ambiente img{
+    position:absolute;
+    width:100%;
+    border:1px solid #ccc;
+}
+
+#mapa-ambiente + table{
+    margin-top:.8em;
+}
+
+/*/ ver localização /*/
+article.localizacao section{
+    margin-bottom:1.2em;
+}
+article.localizacao p{
+    font-size:.7em;
+}
+article.localizacao h3{
+    font-size:1.4em;
+}
+article.localizacao h3 i{
+    padding-right:.4em;
+}
+article.localizacao h4{
+    margin-top:.4em;
+    font-size:.8em;
+    margin-bottom:1em;
+}
+article.localizacao h4 a{
+    color:#0067BD;
+}
+article.localizacao h5{
+    border-bottom:1px solid #999;
+    padding-bottom:.4em;
+    font-size:.8em;
+    margin-bottom:.3em;
+}
+
+//animações ao selecionar marcador
+@-webkit-keyframes markSelected{
+    from{color:#FF6600;}
+    to{color:#FF0000;}
+}
+@-moz-keyframes markSelected{
+    from{color:#FF6600;}
+    to{color:#FF0000;}
+}
+@keyframes markSelected{
+    from{color:#FF6600;}
+    to{color:#FF0000;}
+}
+
+#mapa-ambiente a{
+    display:block;
+    font-size:1.4em;
+    color:#0067BD;
+}
+
+/*/ location panel /*/
+#panel-location{
+}
+
+.dialog{
+    display:none;
+    position: fixed;
+    z-index:1000;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding:.8em;
+    background-color: #ddd;
+    box-shadow:0px 0px 5px #999;
+    width:75%;
+    height:50%;
+    min-height:15.5em;    
+    border-radius:5px;
+}
+
+/* page-sidebar
+-----------------------------------*/
+#page-sidebar{
+	width:100%;
+	margin-top:1.3em;
+	margin-right:11%;
+	background:#eee;
+	padding:10px .7em;
+        clear:both;
+}
+
+#page-sidebar h2{
+	font-size:1.1em;
+	color:#003264;
+	border-bottom:1px solid #999;
+	padding:0px 0 5px 0;
+}
+
+#page-sidebar nav a{
+	font-size:.9em;
+	display:block;
+	padding:10px 0 10px 0;
+        border-bottom:1px solid #ccc;
+}
+
+#page-sidebar nav a:last-of-type{
+    border:0;
+}
+
+#page-sidebar section{
+    margin-bottom:.4em;
+    padding:.4em;
+}
+
+#page-sidebar p{
+    font-size:.9em;
+    padding:.4em 0;
+    text-align:justify;
+}
+
+#page-sidebar .sidebar-login input[type="text"],
+#page-sidebar .sidebar-login input[type="password"]{
+    width:100%;
+    padding:.7em;
+    margin:.3em 0;
+}
+
+#page-sidebar .sidebar-login form{
+    margin-top:.5em;
+}
+
+#page-sidebar .sidebar-login .bts{
+    border:0;
+    margin:0;
+}
+
+#page-sidebar .sidebar-login .bts label{
+    min-width:50%;
+    text-align:left;
+}
+
+#page-sidebar .sidebar-login input[type="checkbox"]{
+    margin-right:.3em;
+    top:.1em;
+    position:relative;
+}
+
+#page-sidebar .sidebar-menu-logged i{
+    margin-right:.5em;
+}
+
+#page-sidebar .sidebar-admins table td{
+    border:0;
+}
+
+#page-sidebar .sidebar-admins table tr{
+    border-top:1px solid #ccc;
+}
+
+#page-sidebar .sidebar-admins table tr:first-of-type{
+    border-top:0;
+}
+
+/* page-footer
+-----------------------------------*/
+#page-footer{
+	font-size:.8em;
+	background:#003264;
+	padding:30px 5%;
+	color:#FFF;
+	clear:both;
+}
+
+/* Media queries
+-------------------------------------------*/
+
+@media only screen and (min-width:29em){
+	#page-header #header-search-form{
+		width:50%;
+		display:block;
+	}
+        .equip-list-item{
+            width:49%;
+            float:left;
+            clear:none;
+        }
+        .equip-list-item:nth-child(odd){
+            margin-right:2%;
+        }
+        
+        .equip-list-item footer{bottom:0}
+        
+	#logged-user-panel{
+            width:30%;
+	}
+	#logo{
+            width:20%;
+	}
+        .appear-medium{
+            display:table-cell;
+        }  
+        .disappear-medium{
+            display:none;
+        }
+        .equipamento h3{
+            text-align:left;
+            padding:0 0 .8em 0;
+        }
+        .equipamento div.equip-img{
+            float:left;
+            width:30%;
+            margin:0;
+            padding:0;
+        }
+        .equipamento div.equip-img img{
+            width:100%;
+        }
+        .equipamento table#equip_info{
+            float:left;
+            width:68%;
+            margin:0;
+            margin-left:2%;
+        }
+        label{
+            width:20%;
+        }
+        input[type="text"], input[type="password"], input[type="file"], input[type="date"], select, textarea {
+            width:80%;
+        }
+}
+
+@media only screen and (min-width:50em){
+	#page-sidebar{
+		float:right;
+		width:22%;
+		border-radius:5px;
+                clear:none;
+	}
+	#page-main{
+		width:54%;
+		float:left;
+		margin-left:11%;
+	}
+	#page-header .header-no-nav{
+		padding:1em 11%;
+	}
+	#page-header #header-search-form{
+		width:45%;
+		display:block;
+		font-size:1.2em;
+	}
+	#page-header #header-search-form input[type=text]{
+		padding:.5em .5em;
+	}
+	#page-header #header-search-form button{
+		padding:.41em .5em;
+	}
+	#logged-user-panel{
+		width:20%;
+	}
+	#logo{
+		width:10%;
+	}
+	#page-header nav#info-nav{
+		float:left;
+		display:block;
+		width:25%;
+	}
+	#page-header nav#main-nav ul{
+		width:78%;
+	}
+	#page-header nav#main-nav ul li{
+		border-right:1px solid rgba(255,255,255,.3);
+	}
+	#page-header nav#main-nav ul li:first-of-type{
+		border-left:1px solid rgba(255,255,255,.3);
+	}
+	#page-header nav#main-nav ul li a.bt-menu span{
+		font-size:1.3em;
+		top:.1em;
+	}
+	#page-header nav#main-nav ul li a.bt-menu span i{
+		top:-.2em;
+	}
+	#page-header nav#main-nav ul li a.bt-menu span.menu-desc{
+		display:block;
+		font-size:1em;
+		opacity:.8;
+		position:relative;
+		top:.7em;
+		padding:0 5%;
+		height:2em;
+	}
+	#page-header nav#main-nav ul.sub-menu li a{
+		font-size:.6em;
+		padding:1.82em;
+	}
+        #mapa-ambiente img{
+            position:absolute;
+            width:52%;
+        }
+        .ambiente ul#equipamentos_presentes li{
+            float:left;
+            width:50%;
+        }
+
+        .ambiente ul#equipamentos_presentes li:nth-child(odd){
+            margin-right:1%;
+            width:49%;
+        }
+        #page-footer{
+            margin-top:8em;
+        }
+        .page-login-side-form{
+            width:44%; 
+            float:right; 
+        }
+        
+        .page-login-side-form p{
+            font-size:.9em;
+        }
+
+        .page-login-form{
+            width:54%;
+            float:left;
+            border-right:1px solid #ccc;
+        }
+
+}
+
+@media only screen and (min-width:70em){
+	#page-header #header-search-form{
+		width:55%;
+		display:block;
+	}
+	#logged-user-panel{
+		width:15%;
+	}
+	#logo{
+		width:10%;
+	}
+	#page-header nav#info-nav{
+		float:left;
+		display:block;
+		width:20%;
+	}
+        .appear-high{
+                display:table-cell;
+        }
+        label{
+            width:20%;
+            font-size:.8em;
+        }
+        input[type="text"], input[type="password"], input[type="file"], input[type="date"], select, textarea {
+            width:80%;
+            font-size:.8em;
+        }
+}
+
+/* Index elements
+-------------------------------------*/
+.index-section{
+    padding:.2em 0 .8em 0;
+    margin-bottom:0em;
+    clear:both;
+}
+.clear{clear:both;}
+.index-section h4{
+    margin-bottom:.3em;
+    font-size:1.1em;
+    color:#003264;
+}
+#index-lista-ambientes li{
+    width:50%;
+    font-size:.8em;
+    padding:1.2em .3em;
+    float:left;
+    border-bottom:1px solid #ccc;
+}
+
+#index-lista-ambientes li:last-of-type{
+    border:0;
+}
+
+#index-lista-ambientes i{
+    color:#0067BD;
+}
+#index-lista-ambientes a{
+    padding-left:.3em;
+}
+
+/* Página de busca
+-------------------------------------*/
+#page-search-form{
+    width:100%;
+    padding:.5em;
+}
+#page-search-form input{
+    width:80%;
+    border:0;
+    border-radius:5px;
+    padding:.6em .5em;
+}
+#page-search-form button{
+    border-radius:5px;
+    font-size:.7em;
+    width:17%;
+    padding:.5em 0;
+}
+#nav-abas-search li{
+    float:left;
+    width:33%;
+    text-align:center;
+}
+#nav-abas-search a{
+    font-size:.7em;
+    display:block;
+    color:#999;
+    border-bottom:2px solid #999;
+    padding:1em 0;
+}
+#nav-abas-search a.selected{
+    color:#000;
+    border-bottom:2px solid #004B9C;
+}
+.tab-search{
+    padding: 1em 0;
+    font-size:.9em;
+}
+
+/* Ver Reserva
+-------------------------*/
+.reserva-equip-img{
+    width:100%;
+    text-align:center;
+}
+.reserva-info{
+    width:100%;
+    text-align:center;
+}
+.reserva-info label{
+    clear:both;
+    font-size:0.8em;
+    width:100%;
+}
+.reserva-info p{
+    font-size:.7em;
+    clear:both;
+}

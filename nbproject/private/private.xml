@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>assets/js/admin.js</url>
+            <bookmark id="1">
+                <name/>
+                <line>65</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/assets/css/admin.css</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/config/routes.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/views/401_error.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/AdminEquip_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/views/gerenciar_cat_equips.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/AdminUser_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/views/consultar_usuarios.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/AdminTut_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/models/CategoriaEquipamento_model.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/models/Autoridade_model.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/views/listar_usuarios.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/User_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/AdminAmb_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/models/CategoriaAmbiente_model.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/models/CategoriaTutorial_model.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/assets/js/admin.js</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/config/form_validation.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/controllers/Public_controller.php</file>
+            <file>file:/C:/xampp/htdocs/SIGEQWebApp2015/application/views/template.php</file>
+        </group>
+    </open-files>
+</project-private>
