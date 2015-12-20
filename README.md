@@ -7,7 +7,7 @@ It was an academic project and can help to understand how CodeIgniter works with
 ##Setting Up
 
 1. Put the folder inside your server's application folder
-2. Run the SQL script (Database/sql/SIGEQ_SQL_ionauth.sql) in a MySQL instance
+2. Run the SQL script (database/sql/SIGEQ_SQL_ionauth.sql) in a MySQL instance
 3. Run the application in your browser
 
 Any doubts, please, refer to greati@ufrn.edu.br
