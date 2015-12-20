@@ -1,4 +1,4 @@
-#SIGEQ - Equipments Management System
+#SIGEQ - Workplaces Management System
 
 This application is a management system for workplaces, aiming to organize mainly equipments, workers, environments and instructions (tutorials).
 
